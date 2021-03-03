@@ -1,0 +1,157 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,sans,dvipsnames]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+%\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvstyle{classic}
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\usepackage[utf8]{inputenc}
+\usepackage[textwidth=6in, textheight=9.5in]{geometry}
+%\usepackage[scale=0.75]{geometry}
+\renewcommand{\refname}{Notable publications}
+%\usepackage{hyperref}
+
+\newcommand\myshade{80}
+\colorlet{mylinkcolor}{violet}
+\colorlet{mycitecolor}{YellowOrange}
+\colorlet{myurlcolor}{Aquamarine}
+
+
+\usepackage{lastpage}
+\rfoot{\addressfont\itshape\textcolor{gray}{\thepage\ / \pageref{LastPage}}}
+
+%\@ifpackageloaded{hyperref}{%
+% \hypersetup{%
+%   pdftitle = {David Yallup CV},
+%   pdfsubject = {David Yallup CV},
+%   pdfkeywords = {CV},
+%   pdfauthor = {\textcopyright\ David Yallup},
+%   linkcolor  = black,%NavyBlue!\myshade!black, %!\myshade!black,
+%   citecolor  = Aquamarine!\myshade!black,
+%   urlcolor   = Aquamarine!\myshade!black,
+%   colorlinks = true
+% }
+
+% personal data
+\name{David}{Yallup}
+\email{david.yallup@gmail.com}
+\social[linkedin]{dyallup}                        % optional, remove / comment the line if not wanted
+\social[gitlab]{dyallup}                              % optional, remove / comment the line if not wanted
+\extrainfo{\textbf{ORCiD}: \href{https://orcid.org/0000-0003-4716-5817}{0000-0003-4716-5817}\\
+GitLab \href{https://gitlab.com/david.yallup}{david.yallup}}
+
+\moderncvicons{marvosym}
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+
+\begin{document}
+
+\makecvtitle
+Researcher specialising in big data, Bayesian statistics and computational modelling. Passionate about cutting edge machine learning and software development for research.
+\newline{}
+%Researcher specialising in big data, statistics, computation and modelling. Passionate about software development for research.
+
+%Passionate about big data research and machine learning.
+%\newline{}
+
+% \section{Areas of Specialization}
+% \cvitem{\textbf{Research}}{High Energy Physics experiment and phenomenology.}
+% \cvitem{\textbf{Computation and modelling}}{Theoretical model building with Monte Carlo techniques and computational methods. 
+% \cvitem{\textbf{Statistics}}{Statistical data analysis with big data.}
+% \cvitem{\textbf{Software}}{Open source software development of research software. Experience with machine learning and deep learning techniques.}
+% \cvitem{Research}{High Energy Physics experiment and phenomenology}
+% \cvitem{Computation and modelling}{Theoretical model building with Monte Carlo techniques and computational methods}
+% \cvitem{Statistics}{Statistical data analysis with big data.}
+% \cvitem{Software}{Open source software development of research software. Experience with machine learning and deep learning techniques.}
+
+% Physics -- High Energy Physics experiment and phenomenology. \\
+% Computation -- Monte Carlo techniques and computational methods. \\
+% Statistics -- Statistical data analysis. \\
+% Software -- Open source software development primarily in Python and C++.
+
+\section{Areas of Specialization} %skills
+\cvitem{\textbf{Modelling}}{Computational modelling of complex systems; Monte Carlo event generators for particle physics and Markov Chain Monte Carlo.}
+\cvitem{\textbf{Engineering}}{Over 5 years experience open source software development and design in Python and C++.}
+\cvitem{\textbf{Statistics}}{Statistical inference on big data sets; frequentist hypothesis tests and Bayseian inference.}
+\cvitem{\textbf{ML and AI}}{Usage of advanced machine learning techniques.\textit{ PyTorch, scipy, scikit-learn etc.}}
+\cvitem{\textbf{Collaboration}}{Experience of open source development in small and large teams. \textit{Git, Mercurial, JIRA etc.}}
+% \cvitem{\textbf{Code Quality}}{Managing pipelines, continuous integration, writing public documentation and building unit tests.}
+\cvitem{\textbf{Deployment}}{Containerization (\textit{Docker}) of applications. Execution of code on HPC clusters and Google Cloud. Management of Linux environments.}
+
+
+\section{Appointments and Associations}
+\cventry{2021-Ongoing}{Postdoctoral Research Associate}{Kavli Institute for Cosmology}{University of Cambridge}{Cambridge}{
+  Developing Bayesian statistical techniques from Cosmological problems and applying them to the field of modern Machine Learning. Using Bayesian Neural Networks to develop techniques for computer vision driven by principled Bayesian inference.
+}
+\cventry{2019-2020}{Postdoctoral Research Associate}{High Energy Physics group}{UCL}{London}{
+Developing software tools for cutting edge research.
+\vspace{0.1cm}
+\begin{itemize}
+  \item Teaching and supervision of 6 final year MSci projects.
+  \item Investigation of machine learning techniques and advanced correlated likelihood treatment in theoretical LHC simulations.
+\end{itemize}
+\vspace{0.1cm}
+}
+\cventry{2015-2019}{Doctoral candidate}{High Energy Physics group}{UCL}{London}{
+\textit{Recipient of UCL HEP postgraduate prize for outstanding postgraduate research.} \\
+Specialising in novel calculations and methods at the interface of experiment and theory at the LHC (Large Hadron Collider).
+\vspace{0.1cm}
+\begin{itemize}
+  \item Led design and development of open source LHC theoretical model surveying tool \textsc{Contur}. %\href{contur.hepforge.org}{\textsc{Contur}}.
+  \item Analyst of big data in group measuring observables sensitive to dark matter production at the LHC, one paper published and another pending.
+  \item Contributing author as a member of the ATLAS experimental collaboration. Key contributions as an expert in theoretical modelling and event visualisation. ATLAS Herwig generator expert.
+  \item Core member of the MCnet theory collaboration, involved with network meeting organisation as a student representative. Awarded numerous travel grants to speak at international conferences and give software tutorials at schools.
+  %\item Recipient of an STFC grant in excess of £100k, fully funding the PhD.
+\end{itemize}\vspace{0.1cm}
+}
+\cventry{2017}{Visiting Researcher}{ATLAS Experiment}{CERN}{Geneva}{STFC funding visiting researcher at CERN for 9 months to contribute to the ATLAS experimental project.}
+\cventry{2016}{Visiting Researcher}{ITP}{KIT}{Karlsruhe}{Recipient of a Marie Curie ESR grant visiting Germany for 4 months for a project on new MC techniques using Herwig.}
+\vspace{0.1cm}
+\cventry{2013-2014}{Business Consultant}{Simcorp Ltd.}{London}{}{Implementation and support consultant for investment technology platform. Portfolio management software for the Investment industry.}
+
+%\newpage
+
+\section{Education}
+%\cventry{2015--2019}{PhD. Particle Physics}{University College London}
+% {Thesis titled, \textit{``Constraining new physics with fiducial LHC measurements.''}}
+% \cventry{2014-2015}{\textsc{MSc} Particles, Strings and Cosmology}{Durham University.}
+% \cventry{2009-2013}{\textsc{MSci} Natural Sciences, Maths and Physics}{Durham University.}
+\cventry{2015--2019}{PhD. Particle Physics}{UCL}{London}{}{Thesis titled, \textit{``Constraining new physics with fiducial LHC measurements.''} supervised by Prof J. Butterworth}  % arguments 3 to 6 can be left empty
+\cventry{2014--2015}{MSc Particles, Strings and Cosmology}{Durham University}{Durham}{}{}
+\cventry{2009--2013}{MSci Natural Sciences, Maths and Physics}{Durham University}{Durham}{}{}
+
+\section{Invited conference talks}
+\cventry{2019}{Les Houches Physics at TeV Colliders}{Chamonix}{France}{}{}%Invited attendee}
+\cventry{2019}{ATLAS Exotics workshop}{Naples}{Italy}{}{}%Constraints on new theories from precision measurements}
+\cventry{2019}{Rencontres de Moriond - EW Interactions and Unified Theories}{La Thuile}{Italy}{}{}%BSM Constraints from Standard Model measurements with Contur}
+\cventry{2019}{Young Experimentalist and Theorists Institute}{Durham}{UK}{}{}%BSM Constraints from Standard Model measurements with Contur}
+\cventry{2018}{Institute of Physics annual meeting}{Bristol}{UK}{}{}%Reinterpretation of precision LHC measurements}
+\cventry{2018}{MC4BSM}{Durham}{UK}{}{}%{MC simulation for BSM physics in ATLAS.}
+\cventry{2017}{Alpine LHC Summit}{Innsbruck}{Austria}{}{}%Constraints on New Theories Using Rivet}
+
+\section{Schools}
+\cventry{2018}{CERN-Fermilab Hadron Collider Physics summer school}{Fermilab}{USA}{}{}
+\cventry{2017}{MCnet summer school on Monte Carlo event generators for LHC physics}{Lund University}{Sweden}{}{}
+\cventry{2016}{STFC High Energy Physics summer school}{Lancaster University}{UK}{}{}
+
+\section{Teaching}
+\cvitem{2019}{Original author and technical support for \textsc{Rivet} and \textsc{Contur} tutorial given at two MCnet PhD summer schools. Delivery via Docker and binder.}
+\cvitem{2019}{Young Experiment and Theorist Institute school tutor on \textsc{Rivet} and \textsc{Contur}. Over 50 attendees.}
+\cvitem{2015-2019}{Assisted supervision of yearly intake of MSci and MSc thesis projects under Prof Butterworth. Including jointly supervising an MSc project in scientific computing.}
+\cvitem{2018-2019}{ATLAS UK meeting tutor on the \textsc{Rivet} package and Monte Carlo methods for particle physics. Over 30 students attending.}
+\cvitem{2016}{First year physics lab demonstrator, UCL Physics.}
+
+%\section{Publications}
+\nocite{*}
+%\bibliographystyle{unsrtdin}
+\bibliographystyle{h-physrev5}
+%\bibliographystyle{JHEP}
+\bibliography{dy_cv} 
+\end{document}
+
+
+
