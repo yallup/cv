@@ -11,10 +11,11 @@
 \moderncvstyle{classic}
 \moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 \usepackage[utf8]{inputenc}
+\usepackage{lmodern,textcomp}
 \usepackage[textwidth=6in, textheight=9.5in]{geometry}
 %\usepackage[scale=0.75]{geometry}
-\renewcommand{\refname}{Notable publications}
-%\usepackage{hyperref}
+\renewcommand{\refname}{Notable publications $\star$}
+
 
 \newcommand\myshade{80}
 \colorlet{mylinkcolor}{violet}
@@ -25,7 +26,9 @@
 \usepackage{lastpage}
 \rfoot{\addressfont\itshape\textcolor{gray}{\thepage\ / \pageref{LastPage}}}
 
-%\@ifpackageloaded{hyperref}{%
+
+
+% \@ifpackageloaded{hyperref}{%
 % \hypersetup{%
 %   pdftitle = {David Yallup CV},
 %   pdfsubject = {David Yallup CV},
@@ -39,6 +42,7 @@
 
 % personal data
 \name{David}{Yallup}
+%\title{CV}
 \email{david.yallup@gmail.com}
 \social[linkedin]{dyallup}                        % optional, remove / comment the line if not wanted
 \social[gitlab]{dyallup}                              % optional, remove / comment the line if not wanted
@@ -51,81 +55,81 @@ GitLab \href{https://gitlab.com/david.yallup}{david.yallup}}
 \begin{document}
 
 \makecvtitle
-Researcher specialising in big data, Bayesian statistics and computational modelling. Passionate about cutting edge machine learning and software development for research.
+Postdoctoral researcher based in the cosmology group at the University of Cambridge. My work focus on Bayesian Machine Learning and \emph{explainable AI}, with applications ranging from industrial challenges to fundamental science at both the biggest and smallest known scales in Physics.
 \newline{}
-%Researcher specialising in big data, statistics, computation and modelling. Passionate about software development for research.
-
-%Passionate about big data research and machine learning.
-%\newline{}
-
-% \section{Areas of Specialization}
-% \cvitem{\textbf{Research}}{High Energy Physics experiment and phenomenology.}
-% \cvitem{\textbf{Computation and modelling}}{Theoretical model building with Monte Carlo techniques and computational methods. 
-% \cvitem{\textbf{Statistics}}{Statistical data analysis with big data.}
-% \cvitem{\textbf{Software}}{Open source software development of research software. Experience with machine learning and deep learning techniques.}
-% \cvitem{Research}{High Energy Physics experiment and phenomenology}
-% \cvitem{Computation and modelling}{Theoretical model building with Monte Carlo techniques and computational methods}
-% \cvitem{Statistics}{Statistical data analysis with big data.}
-% \cvitem{Software}{Open source software development of research software. Experience with machine learning and deep learning techniques.}
-
-% Physics -- High Energy Physics experiment and phenomenology. \\
-% Computation -- Monte Carlo techniques and computational methods. \\
-% Statistics -- Statistical data analysis. \\
-% Software -- Open source software development primarily in Python and C++.
-
-\section{Areas of Specialization} %skills
-\cvitem{\textbf{Modelling}}{Computational modelling of complex systems; Monte Carlo event generators for particle physics and Markov Chain Monte Carlo.}
-\cvitem{\textbf{Engineering}}{Over 5 years experience open source software development and design in Python and C++.}
-\cvitem{\textbf{Statistics}}{Statistical inference on big data sets; frequentist hypothesis tests and Bayseian inference.}
-\cvitem{\textbf{ML and AI}}{Usage of advanced machine learning techniques.\textit{ PyTorch, scipy, scikit-learn etc.}}
-\cvitem{\textbf{Collaboration}}{Experience of open source development in small and large teams. \textit{Git, Mercurial, JIRA etc.}}
-% \cvitem{\textbf{Code Quality}}{Managing pipelines, continuous integration, writing public documentation and building unit tests.}
-\cvitem{\textbf{Deployment}}{Containerization (\textit{Docker}) of applications. Execution of code on HPC clusters and Google Cloud. Management of Linux environments.}
 
 
-\section{Appointments and Associations}
+% \section{Areas of Specialization} %skills
+% \cvitem{\textbf{Machine Learning and AI}}{Primary research theme }
+% \cvitem{\textbf{Particle Physics}}{Original scientific training as a collider High Energy Physicist. Maintain strong links}
+% \cvitem{\textbf{Cosmology}}{test}
+% \cvitem{\textbf{Modelling}}{Computational modelling of complex systems; Monte Carlo event generators for particle physics and Markov Chain Monte Carlo.}
+% \cvitem{\textbf{Engineering}}{Over 5 years experience open source software development and design in Python and C++.}
+% \cvitem{\textbf{Statistics}}{Statistical inference on big data sets; frequentist hypothesis tests and Bayseian inference.}
+% \cvitem{\textbf{ML and AI}}{Usage of advanced machine learning techniques.\textit{ PyTorch, scipy, scikit-learn etc.}}
+% \cvitem{\textbf{Collaboration}}{Experience of open source development in small and large teams. \textit{Git, Mercurial, JIRA etc.}}
+% % \cvitem{\textbf{Code Quality}}{Managing pipelines, continuous integration, writing public documentation and building unit tests.}
+% \cvitem{\textbf{Deployment}}{Containerization (\textit{Docker}) of applications. Execution of code on HPC clusters and Google Cloud. Management of Linux environments.}
+
+
+\section{Appointments}
 \cventry{2021-Ongoing}{Postdoctoral Research Associate}{Kavli Institute for Cosmology}{University of Cambridge}{Cambridge}{
-  Developing Bayesian statistical techniques from Cosmological problems and applying them to the field of modern Machine Learning. Using Bayesian Neural Networks to develop techniques for computer vision driven by principled Bayesian inference.
+  \begin{itemize}
+    \item Primary project in developing novel Bayesian Neural Network methodologies, targeting explainable AI.
+    \item Leading multiple interdisciplinary projects in fundamental science; mixing expertise in Machine Learning, Particle physics and Cosmology.
+    \item Initially funded through an STFC Industry Partnership Scheme, working with a Cambridge Astrophysics spinout company on developing next generation AI tools for industrial challenges.
+  \end{itemize}
 }
+
 \cventry{2019-2020}{Postdoctoral Research Associate}{High Energy Physics group}{UCL}{London}{
-Developing software tools for cutting edge research.
-\vspace{0.1cm}
-\begin{itemize}
-  \item Teaching and supervision of 6 final year MSci projects.
-  \item Investigation of machine learning techniques and advanced correlated likelihood treatment in theoretical LHC simulations.
-\end{itemize}
-\vspace{0.1cm}
+Developing Machine Learning tools for inference over theoretical models at the high energy frontier. Assisting supervision of six masters students using software I had written.
+% \vspace{0.1cm}
+% \begin{itemize}
+%   \item Teaching and supervision of 6 final year MSci projects.
+%   \item Investigation of machine learning techniques and advanced correlated likelihood treatment in theoretical LHC simulations.
+% \end{itemize}
+% \vspace{0.1cm}
 }
 \cventry{2015-2019}{Doctoral candidate}{High Energy Physics group}{UCL}{London}{
-\textit{Recipient of UCL HEP postgraduate prize for outstanding postgraduate research.} \\
-Specialising in novel calculations and methods at the interface of experiment and theory at the LHC (Large Hadron Collider).
-\vspace{0.1cm}
-\begin{itemize}
-  \item Led design and development of open source LHC theoretical model surveying tool \textsc{Contur}. %\href{contur.hepforge.org}{\textsc{Contur}}.
-  \item Analyst of big data in group measuring observables sensitive to dark matter production at the LHC, one paper published and another pending.
-  \item Contributing author as a member of the ATLAS experimental collaboration. Key contributions as an expert in theoretical modelling and event visualisation. ATLAS Herwig generator expert.
-  \item Core member of the MCnet theory collaboration, involved with network meeting organisation as a student representative. Awarded numerous travel grants to speak at international conferences and give software tutorials at schools.
-  %\item Recipient of an STFC grant in excess of £100k, fully funding the PhD.
-\end{itemize}\vspace{0.1cm}
+  PhD student working on the ATLAS experiment and with the MCnet collaboration for collider physics theory. Leading development of tools for simulating collider physics and analysing big data from the experiments for dark matter signals.
+% \textit{Recipient of UCL HEP postgraduate prize for outstanding postgraduate research.} \\
+% Specialising in novel calculations and methods at the interface of experiment and theory at the LHC (Large Hadron Collider).
+% \vspace{0.1cm}
+% \begin{itemize}
+%   \item Led design and development of open source LHC theoretical model surveying tool \textsc{Contur}. %\href{contur.hepforge.org}{\textsc{Contur}}.
+%   \item Analyst of big data in group measuring observables sensitive to dark matter production at the LHC, one paper published and another pending.
+%   \item Contributing author as a member of the ATLAS experimental collaboration. Key contributions as an expert in theoretical modelling and event visualisation. ATLAS Herwig generator expert.
+%   \item Core member of the MCnet theory collaboration, involved with network meeting organisation as a student representative. Awarded numerous travel grants to speak at international conferences and give software tutorials at schools.
+%   %\item Recipient of an STFC grant in excess of £100k, fully funding the PhD.
+%\end{itemize}\vspace{0.1cm}
 }
+\section{Associations}
+\cventry{2021}{Associate Researcher}{PolyChord Ltd}{}{}{Partnered with a Cambridge spin out startup data science consultancy, aiding development of novel Bayesian techniques for a wide array of industrial challenges.}
+\cventry{2021}{Affiliated Data Scientist}{Turing Institute}{London}{}{Selected participant in Data Study group, parterned with Odin Vision investigating explainable AI for cancer diagnosis.}
+\cventry{2015-2019}{MCnet Collaboration}{}{}{}{Student representative for the international multi-institue theory collaboration, involved with network meeting organisation.}
+\cventry{2015-2019}{ATLAS experiment}{}{}{}{Contributing author on the ATLAS experimental collaboration. Key contributions as an expert in theoretical modelling and event visualisation. ATLAS Herwig generator expert.}
 \cventry{2017}{Visiting Researcher}{ATLAS Experiment}{CERN}{Geneva}{STFC funding visiting researcher at CERN for 9 months to contribute to the ATLAS experimental project.}
-\cventry{2016}{Visiting Researcher}{ITP}{KIT}{Karlsruhe}{Recipient of a Marie Curie ESR grant visiting Germany for 4 months for a project on new MC techniques using Herwig.}
-\vspace{0.1cm}
+\cventry{2016}{Visiting Researcher}{ITP}{KIT}{Karlsruhe}{Recipient of a Marie Curie ESR grant visiting Germany for 4 months for a project on new MC techniques for particle physics simulations.}
+%\vspace{0.1cm}
 \cventry{2013-2014}{Business Consultant}{Simcorp Ltd.}{London}{}{Implementation and support consultant for investment technology platform. Portfolio management software for the Investment industry.}
 
 %\newpage
 
 \section{Education}
-%\cventry{2015--2019}{PhD. Particle Physics}{University College London}
-% {Thesis titled, \textit{``Constraining new physics with fiducial LHC measurements.''}}
-% \cventry{2014-2015}{\textsc{MSc} Particles, Strings and Cosmology}{Durham University.}
-% \cventry{2009-2013}{\textsc{MSci} Natural Sciences, Maths and Physics}{Durham University.}
-\cventry{2015--2019}{PhD. Particle Physics}{UCL}{London}{}{Thesis titled, \textit{``Constraining new physics with fiducial LHC measurements.''} supervised by Prof J. Butterworth}  % arguments 3 to 6 can be left empty
+\cventry{2015--2019}{PhD. Particle Physics}{UCL}{London}{}{
+  \textit{Recipient of UCL HEP postgraduate prize for outstanding postgraduate research.} \\  
+  Thesis titled, \textit{``Constraining new physics with fiducial LHC measurements.''} supervised by Prof J. Butterworth}  % arguments 3 to 6 can be left empty
 \cventry{2014--2015}{MSc Particles, Strings and Cosmology}{Durham University}{Durham}{}{}
 \cventry{2009--2013}{MSci Natural Sciences, Maths and Physics}{Durham University}{Durham}{}{}
 
+\section{Grants}
+\cventry{2017}{Marie Curie short term Early Stage Researcher grant}{$\sim£30$k}{}{}{Fully funded Marie Curie visiting position at KIT for 5 months.}
+\cventry{2015-2019}{MCnet mobility allowance}{Totalling $\sim\textsterling5$k}{}{}{Awarded numerous travel grants for international conferences under MCnet Marie Curie network.}
+
 \section{Invited conference talks}
-\cventry{2019}{Les Houches Physics at TeV Colliders}{Chamonix}{France}{}{}%Invited attendee}
+\cventry{2022}{Likelihood Free in Paris}{L'\'Ecole Normale Supérieure}{Paris}{France}{}
+\cventry{2021}{Learn the Universe - LFI for Cosmology}{Flatiron Institute}{NY}{USA}{}
+\cventry{2019}{Les Houches Physics at TeV Colliders}{Chamonix}{France}{}{\textit{One of only $5$ invited junior attendees}}%Invited attendee}
 \cventry{2019}{ATLAS Exotics workshop}{Naples}{Italy}{}{}%Constraints on new theories from precision measurements}
 \cventry{2019}{Rencontres de Moriond - EW Interactions and Unified Theories}{La Thuile}{Italy}{}{}%BSM Constraints from Standard Model measurements with Contur}
 \cventry{2019}{Young Experimentalist and Theorists Institute}{Durham}{UK}{}{}%BSM Constraints from Standard Model measurements with Contur}
@@ -148,9 +152,11 @@ Specialising in novel calculations and methods at the interface of experiment an
 %\section{Publications}
 \nocite{*}
 %\bibliographystyle{unsrtdin}
-\bibliographystyle{h-physrev5}
-%\bibliographystyle{JHEP}
+%\bibliographystyle{h-physrev5}
+\bibliographystyle{JHEP}
 \bibliography{dy_cv} 
+\vspace{1cm}
+\cvitem{}{\small{\emph{$\star$ As an ATLAS collaboration author I am a collaborator on over 280 papers, only external small authorlist papers, or ATLAS papers to which I have made a significant contribution are listed here. HEP results are generally presented alphabetically, inclusion here represents a first author level contribution.}}}
 \end{document}
 
 
