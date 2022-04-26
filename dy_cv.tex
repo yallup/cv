@@ -26,7 +26,16 @@
 \usepackage{lastpage}
 \rfoot{\addressfont\itshape\textcolor{gray}{\thepage\ / \pageref{LastPage}}}
 
-
+\AfterPreamble{\hypersetup{
+    pdftitle = {David Yallup CV},
+  pdfsubject = {David Yallup CV},
+  pdfkeywords = {CV},
+  pdfauthor = {\textcopyright\ David Yallup},
+  linkcolor  = black,%NavyBlue!\myshade!black, %!\myshade!black,
+  citecolor  = Aquamarine!\myshade!black,
+  urlcolor   = Aquamarine!\myshade!black,
+  colorlinks = true
+}}
 
 % \@ifpackageloaded{hyperref}{%
 % \hypersetup{%
@@ -43,11 +52,13 @@
 % personal data
 \name{David}{Yallup}
 %\title{CV}
+\address{Kavli Institute for Cosmology\\
+University of Cambridge \\}
 \email{david.yallup@gmail.com}
 \social[linkedin]{dyallup}                        % optional, remove / comment the line if not wanted
-\social[gitlab]{dyallup}                              % optional, remove / comment the line if not wanted
-\extrainfo{\textbf{ORCiD}: \href{https://orcid.org/0000-0003-4716-5817}{0000-0003-4716-5817}\\
-GitLab \href{https://gitlab.com/david.yallup}{david.yallup}}
+\social[github]{yallup}                              % optional, remove / comment the line if not wanted
+\extrainfo{\textbf{ORCiD}: \href{https://orcid.org/0000-0003-4716-5817}{0000-0003-4716-5817}}
+%GitLab \href{https://gitlab.com/david.yallup}{david.yallup}}
 
 \moderncvicons{marvosym}
 \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
@@ -105,7 +116,7 @@ Developing Machine Learning tools for inference over theoretical models at the h
 }
 \section{Associations}
 \cventry{2021}{Associate Researcher}{PolyChord Ltd}{}{}{Partnered with a Cambridge spin out startup data science consultancy, aiding development of novel Bayesian techniques for a wide array of industrial challenges.}
-\cventry{2021}{Affiliated Data Scientist}{Turing Institute}{London}{}{Selected participant in Data Study group, parterned with Odin Vision investigating explainable AI for cancer diagnosis.}
+\cventry{2021}{Project Data Scientist}{Turing Institute}{London}{}{Selected participant in Data Study group, parterned with Odin Vision investigating explainable AI for cancer diagnosis.}
 \cventry{2015-2019}{MCnet Collaboration}{}{}{}{Student representative for the international multi-institue theory collaboration, involved with network meeting organisation.}
 \cventry{2015-2019}{ATLAS experiment}{}{}{}{Contributing author on the ATLAS experimental collaboration. Key contributions as an expert in theoretical modelling and event visualisation. ATLAS Herwig generator expert.}
 \cventry{2017}{Visiting Researcher}{ATLAS Experiment}{CERN}{Geneva}{STFC funding visiting researcher at CERN for 9 months to contribute to the ATLAS experimental project.}
