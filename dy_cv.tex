@@ -6,15 +6,76 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[10pt,a4paper,sans,dvipsnames]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[10pt,a4paper,sans,dvipsnames,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 %\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvstyle{classic}
+% \moderncvstyle{classic}
+% \moderncvstyle{casual}
+\moderncvstyle{banking}
+\usepackage{xcolor}
+\newcommand{\myGray}[1]{\textcolor{gray}{#1}}
+% \usepackage[utf8]{inputenc}
+% \usepackage[OT1]{fontenc}
+% \usepackage{lmodern}
+\setlength{\hintscolumnwidth}{0.15\textwidth}
+\setlength{\separatorcolumnwidth}{0.025\textwidth}
+% \setlength{\maincolumnwidth}{\textwidth-\leftskip-\rightskip-\separatorcolumnwidth-\hintscolumnwidth}%
+
+% \setlength{\maincolumnwidth}{0.5\textwidth}%
+
+\renewcommand*{\cvitem}[3][.25em]{%
+  \begin{tabular}{@{}
+    p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth-\hintscolumnwidth-\separatorcolumnwidth}@{}}%
+    \raggedleft\hintstyle{\raggedleft 
+      \footnotesize\textcolor{gray}{#2}} &{ 
+      #3}%
+  \end{tabular}%
+  \par\addvspace{#1}}
+
+% \renewcommand*{\cvdoubleitem}[5][.25em]{%
+%   \cvitem[#1]{#2}{%
+%     \begin{minipage}[t]{\doubleitemcolumnwidth}#3\end{minipage}%
+%     \hfill% fill of \separatorcolumnwidth
+%     \begin{minipage}[t]{\hintscolumnwidth}\raggedleft\hintstyle{#4}\end{minipage}%
+%     \hspace*{\separatorcolumnwidth}%
+%     \begin{minipage}[t]{\doubleitemcolumnwidth}#5\end{minipage}}}
+
+% \renewcommand*{\cvlistitem}[2][.25em]{%
+%   \cvitem[#1]{}{\listitemsymbol\begin{minipage}[t]{\listitemcolumnwidth}#2\end{minipage}}}
+
+% \renewcommand*{\cvlistdoubleitem}[3][.25em]{%
+%   \cvitem[#1]{}{\listitemsymbol\begin{minipage}[t]{\listdoubleitemcolumnwidth}#2\end{minipage}%
+%   \hfill% fill of \separatorcolumnwidth
+%   \ifthenelse{\equal{#3}{}}%
+%     {}%
+%     {\listitemsymbol\begin{minipage}[t]{\listdoubleitemcolumnwidth}#3\end{minipage}}}}
+
+\renewcommand*{\cventry}[7][.25em]{%
+  \cvitem[#1]{#2}{%
+    {\bfseries#3}%
+    \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
+    \ifthenelse{\equal{#5}{}}{}{, #5}%
+    \ifthenelse{\equal{#6}{}}{}{, #6}%
+    .\strut%
+    \ifx&#7&%
+    \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+
+
+% \renewcommand*{\cvitemwithcomment}[4][.25em]{%
+%   \savebox{\cvitemwithcommentbox}{{#3}}%
+%   \setlength{\cvitemwithcommentskilllength}{\widthof{\usebox{\cvitemwithcommentbox}}}%
+%   \setlength{\cvitemwithcommentcommentlength}{\maincolumnwidth-\separatorcolumnwidth-\cvitemwithcommentskilllength}%
+%   \cvitem[#1]{#2}{%
+%     \begin{minipage}[t]{\cvitemwithcommentskilllength}\usebox{\cvitemwithcommentbox}\end{minipage}%
+%     \hfill% fill of \separatorcolumnwidth
+%     \begin{minipage}[t]{\cvitemwithcommentcommentlength}\raggedleft\small\itshape#4\end{minipage}}}
+
 \moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern,textcomp}
 \usepackage[textwidth=6in, textheight=9.5in]{geometry}
 %\usepackage[scale=0.75]{geometry}
 \renewcommand{\refname}{Notable publications $\star$}
+
 
 
 \newcommand\myshade{80}
@@ -49,98 +110,102 @@
 %   colorlinks = true
 % }
 
+
 % personal data
 \name{David}{Yallup}
 %\title{CV}
-\address{Kavli Institute for Cosmology\\
-University of Cambridge \\}
+\address{Kavli Institute for Cosmology, University of Cambridge }
 \email{david.yallup@gmail.com}
+\homepage{yallup.github.io}
 \social[linkedin]{dyallup}                        % optional, remove / comment the line if not wanted
-\social[github]{yallup}                              % optional, remove / comment the line if not wanted
-\extrainfo{\textbf{ORCiD}: \href{https://orcid.org/0000-0003-4716-5817}{0000-0003-4716-5817}}
+\social[github]{yallup}
+% optional, remove / comment the line if not wanted
+\extrainfo{\footnotesize{ORCiD: \href{https://orcid.org/0000-0003-4716-5817}{0000-0003-4716-5817}\quad Google Scholar: \href{https://scholar.google.com/citations?hl=en&user=gmQyi6EAAAAJ}{david.yallup}}}
+
 %GitLab \href{https://gitlab.com/david.yallup}{david.yallup}}
 
-\moderncvicons{marvosym}
+% \moderncvicons{marvosym}
 \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
 
 \begin{document}
 
 \makecvtitle
-Postdoctoral researcher based in the cosmology group at the University of Cambridge. My work focus on Bayesian Machine Learning and \emph{explainable AI}, with applications ranging from industrial challenges to fundamental science at both the biggest and smallest known scales in Physics.
+I am a postdoctoral researcher based in the cosmology group at the University of Cambridge. My work focuses on Bayesian Machine Learning and \emph{explainable AI}, with applications ranging from industrial challenges to fundamental science at both the biggest and smallest known scales in Physics.
 \newline{}
 
 
-% \section{Areas of Specialization} %skills
-% \cvitem{\textbf{Machine Learning and AI}}{Primary research theme }
-% \cvitem{\textbf{Particle Physics}}{Original scientific training as a collider High Energy Physicist. Maintain strong links}
-% \cvitem{\textbf{Cosmology}}{test}
-% \cvitem{\textbf{Modelling}}{Computational modelling of complex systems; Monte Carlo event generators for particle physics and Markov Chain Monte Carlo.}
-% \cvitem{\textbf{Engineering}}{Over 5 years experience open source software development and design in Python and C++.}
-% \cvitem{\textbf{Statistics}}{Statistical inference on big data sets; frequentist hypothesis tests and Bayseian inference.}
-% \cvitem{\textbf{ML and AI}}{Usage of advanced machine learning techniques.\textit{ PyTorch, scipy, scikit-learn etc.}}
-% \cvitem{\textbf{Collaboration}}{Experience of open source development in small and large teams. \textit{Git, Mercurial, JIRA etc.}}
-% % \cvitem{\textbf{Code Quality}}{Managing pipelines, continuous integration, writing public documentation and building unit tests.}
-% \cvitem{\textbf{Deployment}}{Containerization (\textit{Docker}) of applications. Execution of code on HPC clusters and Google Cloud. Management of Linux environments.}
-
-
+%
 \section{Appointments}
-\cventry{2021-Ongoing}{Postdoctoral Research Associate}{Kavli Institute for Cosmology}{University of Cambridge}{Cambridge}{
+\cventry{2021-}{Postdoctoral Research Associate}{Kavli Institute for Cosmology}{University of Cambridge}{Cambridge}{
   \begin{itemize}
-    \item Primary project in developing novel Bayesian Neural Network methodologies, targeting explainable AI.
+    \item Primary project -- developing novel Bayesian Neural Network methodologies, targeting explainable AI.
     \item Leading multiple interdisciplinary projects in fundamental science; mixing expertise in Machine Learning, Particle physics and Cosmology.
-    \item Initially funded through an STFC Industry Partnership Scheme, working with a Cambridge Astrophysics spinout company on developing next generation AI tools for industrial challenges.
+    \item Initially funded through an STFC Industry Partnership Scheme, working with a Cambridge Astrophysics spin-out company on developing next generation AI tools for industrial challenges.
   \end{itemize}
 }
-
+\subsection{Previously}
 \cventry{2019-2020}{Postdoctoral Research Associate}{High Energy Physics group}{UCL}{London}{
-Developing Machine Learning tools for inference over theoretical models at the high energy frontier. Assisting supervision of six masters students using software I had written.
-% \vspace{0.1cm}
-% \begin{itemize}
-%   \item Teaching and supervision of 6 final year MSci projects.
-%   \item Investigation of machine learning techniques and advanced correlated likelihood treatment in theoretical LHC simulations.
-% \end{itemize}
-% \vspace{0.1cm}
+Developing Machine Learning tools for inference over theoretical models at the highest energy frontiers. Assisting supervision of six masters students using software tools I wrote.
 }
 \cventry{2015-2019}{Doctoral candidate}{High Energy Physics group}{UCL}{London}{
-  PhD student working on the ATLAS experiment and with the MCnet collaboration for collider physics theory. Leading development of tools for simulating collider physics and analysing big data from the experiments for dark matter signals.
-% \textit{Recipient of UCL HEP postgraduate prize for outstanding postgraduate research.} \\
-% Specialising in novel calculations and methods at the interface of experiment and theory at the LHC (Large Hadron Collider).
-% \vspace{0.1cm}
-% \begin{itemize}
-%   \item Led design and development of open source LHC theoretical model surveying tool \textsc{Contur}. %\href{contur.hepforge.org}{\textsc{Contur}}.
-%   \item Analyst of big data in group measuring observables sensitive to dark matter production at the LHC, one paper published and another pending.
-%   \item Contributing author as a member of the ATLAS experimental collaboration. Key contributions as an expert in theoretical modelling and event visualisation. ATLAS Herwig generator expert.
-%   \item Core member of the MCnet theory collaboration, involved with network meeting organisation as a student representative. Awarded numerous travel grants to speak at international conferences and give software tutorials at schools.
-%   %\item Recipient of an STFC grant in excess of £100k, fully funding the PhD.
-%\end{itemize}\vspace{0.1cm}
+  PhD student working on the ATLAS experiment and with the MCnet collaboration for collider physics theory. Leading development of tools for simulating collider physics, and analysing big data from the experiments for dark matter signals.
 }
 \section{Associations}
-\cventry{2021}{Associate Researcher}{PolyChord Ltd}{}{}{Partnered with a Cambridge spin out startup data science consultancy, aiding development of novel Bayesian techniques for a wide array of industrial challenges.}
-\cventry{2021}{Project Data Scientist}{Turing Institute}{London}{}{Selected participant in Data Study group, parterned with Odin Vision investigating explainable AI for cancer diagnosis.}
-\cventry{2015-2019}{MCnet Collaboration}{}{}{}{Student representative for the international multi-institue theory collaboration, involved with network meeting organisation.}
-\cventry{2015-2019}{ATLAS experiment}{}{}{}{Contributing author on the ATLAS experimental collaboration. Key contributions as an expert in theoretical modelling and event visualisation. ATLAS Herwig generator expert.}
-\cventry{2017}{Visiting Researcher}{ATLAS Experiment}{CERN}{Geneva}{STFC funding visiting researcher at CERN for 9 months to contribute to the ATLAS experimental project.}
-\cventry{2016}{Visiting Researcher}{ITP}{KIT}{Karlsruhe}{Recipient of a Marie Curie ESR grant visiting Germany for 4 months for a project on new MC techniques for particle physics simulations.}
+% \subsection{Active}
+\cventry{2022-}{Corpus Christi College}{University of Cambridge}{Research Associate}{}{Associate member of college research community}
+\cventry{2021-}{Polychord Ltd.}{}{Research associate}{}{Partnered with a Cambridge spin out startup data science consultancy, aiding development of novel Bayesian techniques for a wide array of industrial challenges.}
+% \cventry{2021}{Project Data Scientist}{Turing Institute}{London}{}{Selected participant in Data Study group, parterned with Odin Vision investigating explainable AI for cancer diagnosis.}
+\subsection{Previously}
+\cventry{2015-2019}{MCnet Collaboration}{}{}{}{International multi-institue theory collaboration, core member of UCL node.}
+\cventry{2015-2019}{ATLAS Experiment}{CERN}{}{}{Qualified author on the ATLAS experiment}
+\cventry{2017}{Visiting researcher}{ATLAS Experiment}{}{}{STFC funding secondment at CERN for 9 months on the ATLAS experiment.}
+\cventry{2016}{Visiting Researcher}{Karlsruhe Institue of Technology}{Institute of Theretical Physics}{}{Marie Curie early career visiting researcher four month project}
 %\vspace{0.1cm}
-\cventry{2013-2014}{Business Consultant}{Simcorp Ltd.}{London}{}{Implementation and support consultant for investment technology platform. Portfolio management software for the Investment industry.}
+\cventry{2013-2014}{Simcorp Ltd.}{Business Consultant}{Simcorp Ltd.}{London}{}
 
 %\newpage
 
 \section{Education}
-\cventry{2015--2019}{PhD. Particle Physics}{UCL}{London}{}{
-  \textit{Recipient of UCL HEP postgraduate prize for outstanding postgraduate research.} \\  
+\cventry{2015--2019}{PhD. Particle Physics}{UCL}{}{}{
+  \textbf{Recipient of UCL HEP postgraduate prize for outstanding postgraduate research.} \\  
   Thesis titled, \textit{``Constraining new physics with fiducial LHC measurements.''} supervised by Prof J. Butterworth}  % arguments 3 to 6 can be left empty
-\cventry{2014--2015}{MSc Particles, Strings and Cosmology}{Durham University}{Durham}{}{}
-\cventry{2009--2013}{MSci Natural Sciences, Maths and Physics}{Durham University}{Durham}{}{}
+\cventry{2014--2015}{MSc Particles, Strings and Cosmology}{Durham University}{}{}{}
+\cventry{2009--2013}{MSci Natural Sciences, Maths and Physics}{Durham University}{}{}{}
 
 \section{Grants}
-\cventry{2017}{Marie Curie short term Early Stage Researcher grant}{$\sim£30$k}{}{}{Fully funded Marie Curie visiting position at KIT for 5 months.}
+\cventry{2017}{Marie Curie short term Early Stage Researcher grant}{$\sim\textsterling30$k}{}{}{Fully funded Marie Curie visiting position at KIT for 5 months.}
 \cventry{2015-2019}{MCnet mobility allowance}{Totalling $\sim\textsterling5$k}{}{}{Awarded numerous travel grants for international conferences under MCnet Marie Curie network.}
 
-\section{Invited conference talks}
+% \section{Schools}
+% \cventry{2018}{CERN-Fermilab Hadron Collider Physics summer school}{Fermilab}{USA}{}{}
+% \cventry{2017}{MCnet summer school on Monte Carlo event generators for LHC physics}{Lund University}{Sweden}{}{}
+% \cventry{2016}{STFC High Energy Physics summer school}{Lancaster University}{UK}{}{}
+\section{Students}
+
+\cventry{2022-}{Namu Kroupa}{University of Cambridge}{Part III Natural Sciences project}{}{Marginalised Gaussian Processes for Cosmology}
+
+\cventry{2022-}{Boris Deletic}{University of Cambridge}{Part III Natural Sciences project}{co-supervised w. Dr. Will Barker}{Modified gravity on the lattice}
+
+\cventry{2018}{Harry Saunders}{UCL}{MSc in Scientific Computing}{Lead superviser Profesor Jon Butterworth}{Adaptive sampling for physics models in high dimension}
+
+\section{Teaching}
+
+\subsection{Undergraduate teaching}
+\cventry{2022}{Part II Relativity}{University of Cambridge}{Natural sciences tripos (physics)}{}{4 groups of 3 students, $\sim$ 40 hours}
+\cventry{2015-2019}{Masters project supervision}{UCL}{MSci Physics projects}{}{Lead supervisor Prof. Jon Butterworth, assisted over 10 project students}
+\cventry{2016}{First year physics lab demonstrator}{UCL}{}{}{}
+
+\subsection{Technical teaching}
+\cvitem{2019}{Original author of software tutorials for \textsc{Rivet} and \textsc{Contur} particle physics packages. Delivered at two MCnet summer schools.}
+\cvitem{2019}{Young Experiment and Theorist Institute school tutor on \textsc{Rivet} and \textsc{Contur}.}
+\cvitem{2018-2019}{ATLAS UK meeting tutor on the \textsc{Rivet} package and Monte Carlo methods for particle physics.}
+
+\section{Dissemination}
+\subsection{Invited Talks}
+\cventry{2022}{Bayesian Inference in High Energy Physics}{Durham University}{}{}{}
 \cventry{2022}{Likelihood Free in Paris}{L'\'Ecole Normale Supérieure}{Paris}{France}{}
 \cventry{2021}{Learn the Universe - LFI for Cosmology}{Flatiron Institute}{NY}{USA}{}
-\cventry{2019}{Les Houches Physics at TeV Colliders}{Chamonix}{France}{}{\textit{One of only $5$ invited junior attendees}}%Invited attendee}
+\cventry{2019}{Les Houches Physics at TeV Colliders}{Chamonix}{France}{}{}%Invited attendee}
 \cventry{2019}{ATLAS Exotics workshop}{Naples}{Italy}{}{}%Constraints on new theories from precision measurements}
 \cventry{2019}{Rencontres de Moriond - EW Interactions and Unified Theories}{La Thuile}{Italy}{}{}%BSM Constraints from Standard Model measurements with Contur}
 \cventry{2019}{Young Experimentalist and Theorists Institute}{Durham}{UK}{}{}%BSM Constraints from Standard Model measurements with Contur}
@@ -148,17 +213,12 @@ Developing Machine Learning tools for inference over theoretical models at the h
 \cventry{2018}{MC4BSM}{Durham}{UK}{}{}%{MC simulation for BSM physics in ATLAS.}
 \cventry{2017}{Alpine LHC Summit}{Innsbruck}{Austria}{}{}%Constraints on New Theories Using Rivet}
 
-\section{Schools}
-\cventry{2018}{CERN-Fermilab Hadron Collider Physics summer school}{Fermilab}{USA}{}{}
-\cventry{2017}{MCnet summer school on Monte Carlo event generators for LHC physics}{Lund University}{Sweden}{}{}
-\cventry{2016}{STFC High Energy Physics summer school}{Lancaster University}{UK}{}{}
+\subsection{Invited Seminars}
+\cventry{2022}{Evidence is all your need}{University of Cambridge}{High Energy Physics seminar}{}{}
 
-\section{Teaching}
-\cvitem{2019}{Original author and technical support for \textsc{Rivet} and \textsc{Contur} tutorial given at two MCnet PhD summer schools. Delivery via Docker and binder.}
-\cvitem{2019}{Young Experiment and Theorist Institute school tutor on \textsc{Rivet} and \textsc{Contur}. Over 50 attendees.}
-\cvitem{2015-2019}{Assisted supervision of yearly intake of MSci and MSc thesis projects under Prof Butterworth. Including jointly supervising an MSc project in scientific computing.}
-\cvitem{2018-2019}{ATLAS UK meeting tutor on the \textsc{Rivet} package and Monte Carlo methods for particle physics. Over 30 students attending.}
-\cvitem{2016}{First year physics lab demonstrator, UCL Physics.}
+\subsection{Outreach}
+\cventry{2018}{Science Centre Lectures}{University College London}{Physics at the energy frontier}{}{Outreach talk to a group of over 100 sixth form students}
+\cventry{2017-2019}{Life at CERN}{University College London}{}{}{Research introduction talks to third year students in physics at UCL.}
 
 %\section{Publications}
 \nocite{*}
@@ -167,7 +227,7 @@ Developing Machine Learning tools for inference over theoretical models at the h
 \bibliographystyle{JHEP}
 \bibliography{dy_cv} 
 \vspace{1cm}
-\cvitem{}{\small{\emph{$\star$ As an ATLAS collaboration author I am a collaborator on over 280 papers, only external small authorlist papers, or ATLAS papers to which I have made a significant contribution are listed here. HEP results are generally presented alphabetically, inclusion here represents a first author level contribution.}}}
+\cvitem{}{\small{\emph{$\star$ As an ATLAS collaboration author I was an author on over 280 collaboration papers, only external small authorlist papers are listed here. Inclusion here represents a first author level contribution.}}}
 \end{document}
 
 
